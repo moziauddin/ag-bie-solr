@@ -1,8 +1,6 @@
 #!/bin/sh -x
 bail() {
-  echo 1>&2 $*echo "${datestamp}"
-datestamp=`date +'%Y%m%d'`
-echo "${datestamp}"
+  echo 1>&2 $*
   exit 1
 }
 
