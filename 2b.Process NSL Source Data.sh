@@ -4,7 +4,7 @@ bail() {
   exit 1
 }
 
-echo "${datestampecho "${datestamp}"}"
+echo "${datestamp}"
 datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
 
