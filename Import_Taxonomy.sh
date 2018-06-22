@@ -15,7 +15,7 @@ combined="${workDir}/combined/combined"
 importGroup=tomcat7
 bieImportDir="/data/bie/import/combined"
 bieIndexUrl="http://localhost:8080/ws"
-bieIndexServer="ag-bie.oztaxa.com"
+bieIndexServer="`grep -E '^ *serverName *= *http[s]?://' /data/bie-index/config/bie-index-config.properties | sed -e 's/^.*\:\/\///g'`"
 
 [ -d "${combined}" ] || bail "Cant find combined DwCA at ${combined}"
 
