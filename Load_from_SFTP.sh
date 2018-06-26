@@ -14,7 +14,7 @@ configDir=/data/taxxas/config
 workDir=/data/work/taxxas
 sourceDir="${workDir}/${datestamp}"
 credentials="${configDir}/.ssh/${username}.pem"
-sftpServer="ag-bie.oztaxa.com"
+sftpServer="mgmt.oztaxa.com"
 processDir="/data/taxxas/process/TaxxaS_Package_DwCA"
 
 # Retrieve from server
