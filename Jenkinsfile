@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh './test_all.sh'
+                sh "echo SCRIPT_TO_RUN: ${SCRIPT_TO_RUN}"
+                sh "./${SCRIPT_TO_RUN}"
             }
         }
     }
