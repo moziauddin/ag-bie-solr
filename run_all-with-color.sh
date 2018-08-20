@@ -5,7 +5,7 @@ set -e
 green=`tput setaf 2`
 reset=`tput sgr0`
 
-ag_bie_scripts="Load_from_SFTP.sh Process_TaxxaS_Source_Data.sh Combine_Taxonomies.sh Import_Taxonomy.sh Swap_Cores.sh"
+ag_bie_scripts="Load_from_SFTP.sh Process_TaxxaS_Source_Data.sh Process_NSL_Source_Data.sh Combine_Taxonomies.sh Import_Taxonomy.sh Swap_Cores.sh"
 
 for script in ${ag_bie_scripts}
 do
