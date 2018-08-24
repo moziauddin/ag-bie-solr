@@ -14,7 +14,7 @@ workDir=/data/work/nsl
 sourceDir="${workDir}/${datestamp}"
 processDir="/data/taxxas/process/NSL/NSL_Package_DwCA"
 processCmd="./NSL_Package_DwCA_run.sh"
-BNTi_URL="https://dev56-icn.oztaxa.com/nxl/services/export/namesCsv"
+BNTi_URL="https://dev56-icn.oztaxa.com/nxl/services/export/taxonCsv"
 
 # Clear work area
 rm "${workDir}"/DwC/*
