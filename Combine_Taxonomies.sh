@@ -7,8 +7,7 @@ bail() {
 hostname
 /sbin/ifconfig
 
-echo "${datestamp}"
-datestamp=`date +'%Y%m%d'`
+datestamp=${1}
 echo "${datestamp}"
 
 # Configuration
