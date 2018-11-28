@@ -12,15 +12,15 @@ datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
 
 # Configuration
-configDir=/data/taxxas/config
-workDir=/data/work/combined
-taxxasDir="/data/work/taxxas"
-nslDir="/data/work/nsl"
-combineDir="/data/taxxas/ala-name-matching"
+configDir="/data/processing/config"
+workDir="/data/work/combined"
+taxxasDir="/data/work/TaxxaS"
+nslDir="/data/work/NSL"
+combineDir="/data/processing/ala-name-matching"
 combineCmd="build-combined.sh"
 combinedDir="${workDir}/combined_${datestamp}"
 combined="${workDir}/combined"
-archiveDir="/data/work/archive"
+archiveDir="/data/archive"
 
 # Clear work area
 rm "${combined}"/*

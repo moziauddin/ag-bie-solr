@@ -9,10 +9,10 @@ datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
 
 # Configuration
-configDir=/data/taxxas/config
-workDir=/data/work/taxxas
+configDir="/data/processing/config"
+workDir="/data/work/TaxxaS"
 sourceDir="${workDir}/${datestamp}"
-processDir="/data/taxxas/process/TaxxaS/TaxxaS_Package_DwCA"
+processDir="/data/processing/TaxxaS/TaxxaS_Package_DwCA"
 processCmd="./TaxxaS_Package_DwCA_run.sh"
 
 # Clear work area

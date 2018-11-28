@@ -9,10 +9,10 @@ datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
 
 # Configuration
-configDir=/data/taxxas/config
-workDir=/data/work/nsl
+configDir="/data/processing/config"
+workDir="/data/work/NSL"
 sourceDir="${workDir}/${datestamp}"
-processDir="/data/taxxas/process/NSL/NSL_Package_DwCA"
+processDir="/data/processing/NSL/NSL_Package_DwCA"
 processCmd="./NSL_Package_DwCA_run.sh"
 
 # Clear work area

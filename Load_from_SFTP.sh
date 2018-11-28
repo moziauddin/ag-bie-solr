@@ -10,12 +10,11 @@ echo "${datestamp}"
 
 # Configuration
 username=dawr
-configDir=/data/taxxas/config
-workDir=/data/work/taxxas
+configDir="/data/processing/config"
+workDir="/data/work/TaxxaS"
 sourceDir="${workDir}/${datestamp}"
 credentials="${configDir}/.ssh/${username}.pem"
 sftpServer="mgmt.oztaxa.com"
-processDir="/data/taxxas/process/TaxxaS_Package_DwCA"
 
 # Retrieve from server
 [ -d "${sourceDir}" ] || mkdir -p "${sourceDir}" || bail "Unable to create source directory ${sourceDir}"

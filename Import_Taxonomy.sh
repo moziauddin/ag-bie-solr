@@ -9,9 +9,9 @@ datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
 
 # Configuration
-configDir=/data/taxxas/config
-workDir=/data/work
-combined="${workDir}/combined/combined"
+configDir="/data/processing/config"
+workDir="/data/work/combined"
+combined="${workDir}/combined"
 importGroup=tomcat7
 bieImportDir="/data/bie/import/combined"
 bieIndexUrl="http://localhost:8080/ws"
