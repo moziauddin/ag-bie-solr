@@ -21,7 +21,7 @@ bieIndexServer="`grep -E '^ *serverName *= *http[s]?://' /data/bie-index/config/
 
 # Copy result to bie import area and make importable by tomcat7
 [ -d "${bieImportDir}" ] && ( rm -rf "${bieImportDir}" || bail "Unable to delete ${bieImportDir}" )
-cp -pr "${combined}"/* "${bieImportDir}" || bail "Unable to copy to ${bieImportDir}"
+cp -pr "${combined}" "${bieImportDir}" || bail "Unable to copy to ${bieImportDir}"
 chgrp "${importGroup}" "${bieImportDir}" || bail "Unable to make ${bieImportDir} group ${importGroup}"
 chmod g+w "${bieImportDir}" || bail "Unable to make ${bieImportDir} group writable"
 
