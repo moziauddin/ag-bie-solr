@@ -9,7 +9,7 @@ datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
 
 # Configuration
-solrUrl="http://localhost:8080/solr"
+solrUrl="http://localhost:8983/solr"
 core1=bie
 core2=bie-offline
 
