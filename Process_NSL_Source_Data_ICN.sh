@@ -10,11 +10,13 @@ echo "${datestamp}"
 
 # Configuration
 configDir="/data/processing/config"
-workDir="/data/work/NSL"
+workDir="/data/work/NSL-ICN"
 sourceDir="${workDir}/${datestamp}"
 processDir="/data/processing/NSL/NSL_Package_DwCA"
 processCmd="./NSL_Package_DwCA_run.sh"
-BNTi_URL="https://icn.oztaxa.com/nxl/services/export/taxonCsv"
+BNTi_server="icn.oztaxa.com"
+BNTi_URL="https://${BNTi_server}/nxl/services/export/taxonCsv"
+dataSetID="nsl-icn"
 
 # Clear work area
 rm "${workDir}"/DwC/*
@@ -29,7 +31,7 @@ ls -lahF "${sourceDir}"/nsl_dawr_bieexport.csv
 
 # Convert TaxxaS tables into DwCA
 cd "${processDir}" || bail "Uable to get to process directory ${processDir}"
-${processCmd} --context_param "workDir=${workDir}" --context_param "dateStamp=${datestamp}" --context_param "configDir=${configDir}" --context_param "outputDir=${workDir}"
+${processCmd} --context_param "workDir=${workDir}" --context_param "dateStamp=${datestamp}" --context_param "configDir=${configDir}" --context_param "outputDir=${workDir}" --context_param "nslDataResourceUID=${dataSetID}"
 if [ $? -ne 0 ]; then
  bail "Unable to process source files"
 fi
