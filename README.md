@@ -17,6 +17,8 @@ These are the [ag-bie](https://ag-bie.oztaxa.com/) jobs to build the solr search
 |Swap_Cores.sh | Swap Solr Cores|
 |run_all.sh | Runs all above scripts in proper sequence|
 
+---
+
 **Contact:**
 
-Contact us using the Github contact...
+> Contact us using the Github contact...
