@@ -30,7 +30,7 @@ curl -s "${BNTi_URL}" > "${sourceDir}"/nsl_dawr_bieexport.csv
 ls -lahF "${sourceDir}"/nsl_dawr_bieexport.csv
 
 # Clean the IDs in the NSL CSV File
-sed -iE 's@(https?://[^,]+|(/[^,/]+)+)/([0-9]+)@\3@g' "${sourceDir}"/nsl_dawr_bieexport.csv
+sed -i -E 's@(https?://[^,]+|(/[^,/]+)+)/([0-9]+)@\3@g' "${sourceDir}"/nsl_dawr_bieexport.csv
 
 # Convert TaxxaS tables into DwCA
 cd "${processDir}" || bail "Uable to get to process directory ${processDir}"
