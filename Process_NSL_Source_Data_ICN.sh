@@ -29,6 +29,9 @@ echo "Downloading BNTi names CSV from: ${BNTi_URL}"
 curl -s "${BNTi_URL}" > "${sourceDir}"/nsl_dawr_bieexport.csv
 ls -lahF "${sourceDir}"/nsl_dawr_bieexport.csv
 
+# Clean the IDs in the NSL CSV File
+sed -iE 's@(https?://[^,]+|(/[^,/]+)+)/([0-9]+)@\3@g' "${sourceDir}"/nsl_dawr_bieexport.csv
+
 # Convert TaxxaS tables into DwCA
 cd "${processDir}" || bail "Uable to get to process directory ${processDir}"
 ${processCmd} --context_param "workDir=${workDir}" --context_param "dateStamp=${datestamp}" --context_param "configDir=${configDir}" --context_param "outputDir=${workDir}" --context_param "nslDataResourceUID=${dataSetID}"
