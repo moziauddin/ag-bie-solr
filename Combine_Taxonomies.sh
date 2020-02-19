@@ -4,9 +4,6 @@ bail() {
   exit 1
 }
 
-hostname
-/sbin/ifconfig
-
 echo "${datestamp}"
 datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
@@ -22,6 +19,8 @@ nslICVCNDir="/data/work/NSL-ICVCN"
 anbgMOSSDir="/data/work/ANBG-MOSS"
 anbgLICHDir="/data/work/ANBG-LICH"
 anbgVASCDir="/data/work/ANBG-VASC"
+anbgFUNGIDir="/data/work/ANBG-FUNG"
+anbgALGAEIDir="/data/work/ANBG-ALGA"
 combineDir="/data/processing/ala-name-matching"
 combineCmd="build-combined.sh"
 combinedDir="${workDir}/combined_${datestamp}"
@@ -33,7 +32,7 @@ rm "${combined}"/*
 
 # Combine DwCAs
 cd "${combineDir}" || bail "Uable to get to process directory ${combineDir}"
-./build-combined.sh -c "${configDir}/taxxas-taxon-config.json" -w "${workDir}" -o "${combined}"  "${taxxasDir}/DwC/" "${nslICNDir}/DwC/" "${nslICZNDir}/DwC" "${nslICNPDir}/DwC" "${nslICVCNDir}/DwC" "${anbgMOSSDir}/DwC" "${anbgLICHDir}/DwC" "${anbgVASCDir}/DwC"
+./build-combined.sh -c "${configDir}/taxxas-taxon-config.json" -w "${workDir}" -o "${combined}"  "${taxxasDir}/DwC/" "${nslICNDir}/DwC/" "${nslICZNDir}/DwC" "${nslICNPDir}/DwC" "${nslICVCNDir}/DwC" "${anbgMOSSDir}/DwC" "${anbgLICHDir}/DwC" "${anbgVASCDir}/DwC" "${anbgFUNGIDir}/DwC" "${anbgALGAEDir}/DwC"
 #./build-combined.sh -c "${configDir}/taxxas-taxon-config.json" -w "${workDir}" -o "${combined}"  "${taxxasDir}/DwC/"
 if [ $? -ne 0 ]; then
  bail "Unable to combine taxonomies"
