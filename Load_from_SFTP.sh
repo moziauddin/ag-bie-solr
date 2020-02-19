@@ -8,6 +8,8 @@ echo "${datestamp}"
 datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
 
+chmod +x *.sh
+
 # Configuration
 username=dawr
 configDir="/data/processing/config"
