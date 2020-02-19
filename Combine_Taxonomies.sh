@@ -32,7 +32,7 @@ rm "${combined}"/*
 
 # Combine DwCAs
 cd "${combineDir}" || bail "Uable to get to process directory ${combineDir}"
-./build-combined.sh -c "${configDir}/taxxas-taxon-config.json" -w "${workDir}" -o "${combined}"  "${taxxasDir}/DwC/" "${nslICNDir}/DwC/" "${nslICZNDir}/DwC" "${nslICNPDir}/DwC" "${nslICVCNDir}/DwC" "${anbgMOSSDir}/DwC" "${anbgLICHDir}/DwC" "${anbgVASCDir}/DwC" "${anbgFUNGIDir}/DwC" "${anbgALGAEDir}/DwC"
+./build-combined.sh -c "${configDir}/taxxas-taxon-config.json" -w "${workDir}" -o "${combined}"  "${taxxasDir}/DwC/" "${nslICNDir}/DwC/" "${nslICZNDir}/DwC" "${nslICNPDir}/DwC" "${nslICVCNDir}/DwC" "${anbgMOSSDir}/DwC" "${anbgLICHDir}/DwC" "${anbgVASCDir}/DwC" "${anbgFUNGIDir}/DwC" "${anbgALGAEIDir}/DwC"
 #./build-combined.sh -c "${configDir}/taxxas-taxon-config.json" -w "${workDir}" -o "${combined}"  "${taxxasDir}/DwC/"
 if [ $? -ne 0 ]; then
  bail "Unable to combine taxonomies"
