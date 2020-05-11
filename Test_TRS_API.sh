@@ -8,7 +8,7 @@ datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
 
 # install dependecies
-pip install requests
+python -m pip install requests
 
 # Run Test Python Script
 chmod +x ./trs-api-tests.py
