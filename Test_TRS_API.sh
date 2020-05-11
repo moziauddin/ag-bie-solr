@@ -8,7 +8,14 @@ datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
 
 # install dependecies
-python -m pip install requests
+echo "Python Version: "
+python -V
+
+# Install pip
+sudo apt-gen install python-pip
+
+# install requests library
+pip install requests
 
 # Run Test Python Script
 chmod +x ./trs-api-tests.py
