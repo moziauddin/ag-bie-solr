@@ -12,4 +12,4 @@ host=$(echo $JENKINS_URL | awk -F/ '{print $3}')
 echo "Running tests on $host"
 
 # Run Test Python Script
-python3 ./trs-api-tests.py $host
+python3.7 ./trs-api-tests.py $host
