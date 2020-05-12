@@ -8,5 +8,8 @@ datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
 
 # Run Test Python Script
-chmod +x ./trs-api-tests.py
-python3 ./trs-api-tests.py localhost
+host=$(echo $JENKINS_URL | awk -F/ '{print $3}')
+echo "Running tests on $host"
+
+# Run Test Python Script
+python3 ./trs-api-tests.py $host

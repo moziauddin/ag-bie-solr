@@ -116,7 +116,7 @@ try:
 
     # Bulk Lookup by String
     url = base_url + 'species/guids/bulklookup'
-    data = "[\"Drosophila\",\"Acacia\",\"Bactrocera\",\"Microporus\",\"Tuberculatus\"ax]"
+    data = "[\"Drosophila\",\"Acacia\",\"Bactrocera\",\"Microporus\",\"Tuberculatus\"]"
     res = requests.post(url, data=data)
     sr = json.loads(res.content)
     total_records = sr['searchDTOList']
