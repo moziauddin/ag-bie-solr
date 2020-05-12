@@ -7,16 +7,6 @@ bail() {
 datestamp=`date +'%Y%m%d'`
 echo "${datestamp}"
 
-# install dependecies
-echo "Python Version: "
-python -V
-
-# Install pip
-sudo apt-gen install python-pip
-
-# install requests library
-pip install requests
-
 # Run Test Python Script
 chmod +x ./trs-api-tests.py
-python ./trs-api-tests.py localhost
+python3 ./trs-api-tests.py localhost
