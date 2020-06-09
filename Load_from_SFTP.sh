@@ -14,7 +14,7 @@ configDir="/data/processing/config"
 workDir="/data/work/TaxxaS"
 sourceDir="${workDir}/${datestamp}"
 credentials="${configDir}/.ssh/${username}.pem"
-sftpServer="mgmt.oztaxa.com"
+sftpServer="dev-mgmt.oztaxa.com"
 
 # Retrieve from server
 [ -d "${sourceDir}" ] || mkdir -p "${sourceDir}" || bail "Unable to create source directory ${sourceDir}"
